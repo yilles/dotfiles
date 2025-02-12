@@ -2,7 +2,6 @@ alias ls="ls --color"
 alias vi="nvim"
 alias vim="nvim"
 
-
 function parse_git_dirty {
   [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
 }
