@@ -8,6 +8,9 @@ sudo tar xzf zellij-x86_64-unknown-linux-musl.tar.gz -C /usr/local/bin
 wget https://nodejs.org/download/release/latest/node-v23.8.0-linux-x64.tar.gz -O node-v23.8.0-linux-x64.tar.gz
 sudo tar xzf node-v23.8.0-linux-x64.tar.gz -C /usr/local/bin
 
+wget https://go.dev/dl/go1.24.0.linux-amd64.tar.gz -O go1.24.0.linux-amd64.tar.gz
+sudo tar xzf go1.24.0.linux-amd64.tar.gz -C /usr/local/bin
+
 ln -sf ~/dotfiles/nvim/.config/nvim/init.vim ~/.config/nvim/init.vim
 git clone --depth 1 https://github.com/sheerun/vim-polyglot ~/.config/nvim/pack/plugins/start/vim-polyglot
 
