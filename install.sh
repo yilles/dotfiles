@@ -1,4 +1,3 @@
-wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz -O nvim-linux64.tar.gz
 wget https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-x86_64.tar.gz -O nvim-linux-x86_64.tar.gz
 sudo tar xzf nvim-linux-x86_64.tar.gz -C /usr/local/bin
 
