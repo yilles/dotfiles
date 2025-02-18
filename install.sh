@@ -10,8 +10,9 @@ sudo tar xzf node-v22.14.0-linux-x64.tar.gz -C /usr/local/bin
 wget https://go.dev/dl/go1.24.0.linux-amd64.tar.gz -O go1.24.0.linux-amd64.tar.gz
 sudo tar xzf go1.24.0.linux-amd64.tar.gz -C /usr/local/bin
 
-ln -sf ~/dotfiles/nvim/.config/nvim/init.vim ~/.config/nvim/init.vim
+ln -sf ~/dotfiles/nvim/.config/nvim/init.lua ~/.config/nvim/init.lua
 git clone --depth 1 https://github.com/sheerun/vim-polyglot ~/.config/nvim/pack/plugins/start/vim-polyglot
+git clone --depth 1 https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
 
 ln -sf ~/dotfiles/zellij/.config/zellij/config.kdl ~/.config/zellij/config.kdl
 ln -sf ~/dotfiles/zellij/.config/zellij/config.kdl.bak ~/.config/zellij/config.kdl.bak
