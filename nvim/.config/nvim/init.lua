@@ -12,10 +12,6 @@ vim.o.expandtab = true
 
 vim.o.incsearch = true
 
-vim.api.nvim_set_keymap("i", "(", "()<Esc>i", { noremap = true })
-
-vim.api.nvim_set_keymap("i", "{", "{}<Esc>i", { noremap = true })
-
 vim.cmd("syntax on")
 
 vim.cmd("filetype plugin indent on")
@@ -33,4 +29,10 @@ lspconfig.gopls.setup({
       gofumpt = true,
     },
   },
+})
+
+require("nvim-autopairs").setup({
+  enable_moveright = true,
+  check_ts = true,
+  map_cr = true,
 })
