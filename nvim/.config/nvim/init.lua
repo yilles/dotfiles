@@ -16,7 +16,16 @@ vim.cmd('syntax on')
 
 vim.cmd('filetype plugin indent on')
 
-vim.cmd('colorscheme desert')
+vim.cmd('colorscheme catppuccin')
+
+require('nvim-treesitter.configs').setup {
+  ensure_installed = { "go", "rust", "lua", "vim", "bash" },
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+  indent = { enable = true },
+}
 
 require('nvim-autopairs').setup({
   enable_moveright = true,

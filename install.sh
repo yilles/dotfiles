@@ -21,7 +21,8 @@ sudo unzip protoc-30.0-linux-x86_64.zip -d /usr/local/bin/protoc
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/zellij
 
-git clone --depth 1 https://github.com/sheerun/vim-polyglot ~/.config/nvim/pack/nvim/start/vim-polyglot
+git clone --depth 1 https://github.com/nvim-treesitter/nvim-treesitter ~/.config/nvim/pack/nvim/start/nvim-treesitter
+git clone --depth 1 https://github.com/catppuccin/nvim.git ~/.config/nvim/pack/nvim/start/catppuccin
 git clone --depth 1 https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
 git clone --depth 1 https://github.com/windwp/nvim-autopairs ~/.config/nvim/pack/nvim/start/nvim-autopairs
 git clone --depth 1 https://github.com/hrsh7th/nvim-cmp.git ~/.config/nvim/pack/nvim/start/nvim-cmp
