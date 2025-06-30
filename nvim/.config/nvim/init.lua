@@ -1,4 +1,4 @@
-vim.o.encoding = "utf-8"
+vim.o.encoding = 'utf-8'
 
 vim.wo.number = true
 
@@ -12,14 +12,35 @@ vim.o.expandtab = true
 
 vim.o.incsearch = true
 
-vim.cmd("syntax on")
+vim.cmd('syntax on')
 
-vim.cmd("filetype plugin indent on")
+vim.cmd('filetype plugin indent on')
 
-vim.cmd("colorscheme desert")
+vim.cmd('colorscheme desert')
 
-local lspconfig = require("lspconfig")
-lspconfig.gopls.setup({
+require('nvim-autopairs').setup({
+  enable_moveright = true,
+  check_ts = true,
+  map_cr = true,
+})
+
+local cmp = require'cmp'
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }),
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'buffer' },
+    { name = 'path' },
+  },
+})
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+require('lspconfig').gopls.setup{
+  capabilities = capabilities,
   settings = {
     gopls = {
       analyses = {
@@ -29,10 +50,4 @@ lspconfig.gopls.setup({
       gofumpt = true,
     },
   },
-})
-
-require("nvim-autopairs").setup({
-  enable_moveright = true,
-  check_ts = true,
-  map_cr = true,
-})
+}

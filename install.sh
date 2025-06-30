@@ -24,6 +24,8 @@ mkdir -p ~/.config/zellij
 git clone --depth 1 https://github.com/sheerun/vim-polyglot ~/.config/nvim/pack/nvim/start/vim-polyglot
 git clone --depth 1 https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
 git clone --depth 1 https://github.com/windwp/nvim-autopairs ~/.config/nvim/pack/nvim/start/nvim-autopairs
+git clone --depth 1 https://github.com/hrsh7th/nvim-cmp.git ~/.config/nvim/pack/nvim/start/nvim-cmp
+git clone --depth 1 https://github.com/hrsh7th/cmp-nvim-lsp.git ~/.config/nvim/pack/nvim/start/cmp-nvim-lsp
 
 ln -sf ~/dotfiles/bash/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/nvim/.config/nvim/init.lua ~/.config/nvim/init.lua
